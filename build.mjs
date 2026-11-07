@@ -6,6 +6,6 @@ const template=(await readFile('src/exhibition/page.html','utf8')).replace('å…è
 const license=await readFile('legal/THREE-LICENSE.txt','utf8');const soundtrack=await readFile('assets/soundtrack.mp3');
 const html=template.replace('__BACKGROUND_MUSIC__',()=>`data:audio/mpeg;base64,${soundtrack.toString('base64')}`).replace('/* STYLE */',()=>css).replace('/* SCRIPT */',()=>`/* Three.js license\n${license}\n*/\n`+result.outputFiles[0].text.replace(/<\/script/gi,'<\\/script'));
 await mkdir('docs/exhibition',{recursive:true});await writeFile('docs/exhibition/index.html',html);
-for(const name of ['index.html','style.css','main.js','player.js','network.js'])await copyFile(`site/${name}`,`docs/${name}`);
+for(const name of ['index.html','style.css','main.js','player.js','network.js','direct.html','direct.js'])await copyFile(`site/${name}`,`docs/${name}`);
 await writeFile('docs/.nojekyll','');
 console.log('Showcase and interactive exhibition built.');

@@ -32,9 +32,9 @@ test('failed source can be downgraded without discarding the saved position',asy
 });
 
 // The HTML must use the same optimized stream before JavaScript runs.
-test('initial 4K stream preloads video content while the original download stays separate', async()=>{
+test('fallback 4K stream preloads video content while the original download stays separate', async()=>{
   const {readFile}=await import('node:fs/promises');
-  const html=await readFile(new URL('../site/index.html',import.meta.url),'utf8');
+  const html=await readFile(new URL('../site/direct.html',import.meta.url),'utf8');
   assert.match(html, /<video[^>]+preload="auto"/);
   assert.match(html, /<source src="[^"]+changan-xianying-4k-web\.mp4"/);
   assert.match(html, /href="[^"]+changan-xianying-4k\.mp4">下载 4K 原片/);
