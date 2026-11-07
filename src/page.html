@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b0b"><title>长安显影 — 西安古建艺术</title><style>/* STYLE */</style></head>
+<body>
+ <div class="exhibition">
+  <header>
+   <a class="brand" href="#" aria-label="长安显影首页"><span class="brand-mark">長安<span class="seal">显影</span></span><span class="brand-sub">CHANG’AN<br>ARCHITECTURAL STUDIES</span></a>
+   <div class="header-center">光点聚起，建筑成形。<span>XI’AN · ARCHITECTURAL POINT CLOUD</span></div>
+   <nav aria-label="作品导航"><button id="settingsButton" aria-expanded="false" aria-controls="settings">画面设置 <span>↗</span></button><button id="aboutButton">关于作品 <span>↗</span></button></nav>
+  </header>
+  <main>
+   <div class="background-type" aria-hidden="true">长安</div>
+   <section class="story" aria-live="polite">
+    <div class="eyebrow"><span class="red-line"></span> 西安古建 · 点云艺术 <span class="edition">VOL. 01</span></div>
+    <div class="archive-number">建筑档案 <span id="archiveNumber">001</span> <span class="slash">/</span> 003</div>
+    <h1 id="buildingName">钟楼</h1>
+    <div class="english-name" id="englishName">THE BELL TOWER</div>
+    <p class="era" id="era">明 · 洪武十七年 <span>1384</span></p>
+    <div class="story-rule"></div>
+    <p class="poem" id="poem">四条长街，在此交汇。<br>钟楼立在中央。</p>
+    <div class="structure"><span>形制 / TYPOLOGY</span><p id="typology">重檐三滴水 · 四角攒尖</p></div>
+    <button class="export-button" id="exportButton"><span>↓</span> 保存画面 <span class="export-note">PNG</span></button>
+   </section>
+   <section class="stage" id="stage" aria-label="交互式三维建筑：拖动旋转，滚轮或双指缩放">
+    <div class="stage-cross top-left" aria-hidden="true">+</div><div class="stage-cross bottom-right" aria-hidden="true">+</div>
+    <div class="loading" id="loading">正在生成建筑点云 <span>GENERATING POINTS</span></div>
+   </section>
+   <div class="stage-caption"><span class="live-dot"></span><span id="captionText">程序化点云 / PROCEDURAL POINT CLOUD</span><span class="caption-separator">·</span><span id="pointCount">—</span> <span>POINTS</span></div>
+   <aside class="telemetry" aria-label="实时观测数据">
+    
+    <div class="compass" aria-hidden="true"><span>N</span><i></i><b>＋</b></div>
+    <div class="readout"><div>扫描进度 <span id="scanPercent">00%</span></div><div class="scan-bar"><i id="scanBar"></i></div><small id="scanStatus">LASER SCAN ACTIVE</small></div>
+    <dl><div><dt>建筑高度</dt><dd id="buildingHeight">36 m</dd></div><div><dt>呈现方式</dt><dd id="modeName">激光扫描</dd></div></dl>
+    <div class="coordinates" id="coordinates">34.2600° N<br>108.9422° E</div>
+   </aside>
+   <div class="interaction-hint"><span>↔</span> 拖动旋转 <i></i> 滚轮缩放 <button id="detailView" title="放大查看建筑构件">⊕ 查看细部</button><button id="resetView" title="恢复初始视角">↺ 返回全景</button></div>
+   <div class="view-toolbar"><button id="pauseButton" aria-label="暂停动画" aria-pressed="false">Ⅱ</button><span>实时演绎</span><button id="fullscreenButton" aria-label="进入全屏" title="全屏">⛶</button></div>
+  </main>
+  <footer>
+   <div class="collection-label">长安三景<span>THE COLLECTION</span></div>
+   <div class="building-tabs" role="group" aria-label="选择建筑">
+    <button class="building-tab active" data-building="bell" aria-pressed="true"><span class="tab-number">01</span><svg viewBox="0 0 70 52" aria-hidden="true"><path d="M9 45H61V35H9ZM19 34V25M51 34V25M15 25L25 20H45L55 25ZM24 20V15M46 20V15M20 15L29 10H41L50 15ZM26 10L35 2L44 10M35 0V3M29 45V39Q35 32 41 39V45"/></svg><span>钟楼<small>BELL TOWER</small></span><span class="tab-arrow">↗</span></button>
+    <button class="building-tab" data-building="pagoda" aria-pressed="false"><span class="tab-number">02</span><svg viewBox="0 0 70 52" aria-hidden="true"><path d="M20 47H50M22 46L23 39H47L48 46M23 38L24 32H46L47 38M24 31L25 25H45L46 31M25 24L26 18H44L45 24M26 17L27 12H43L44 17M27 11L29 6H41L43 11M29 5L35 1L41 5M35 45V41M35 36V34M35 29V27M35 22V20M35 15V13M35 9V7"/></svg><span>大雁塔<small>WILD GOOSE PAGODA</small></span><span class="tab-arrow">↗</span></button>
+    <button class="building-tab" data-building="gate" aria-pressed="false"><span class="tab-number">03</span><svg viewBox="0 0 70 52" aria-hidden="true"><path d="M5 46V32H65V46ZM9 32V28H15V32M55 32V28H61V32M20 32V23M50 32V23M14 23L24 17H46L56 23ZM25 17V12M45 17V12M20 12L29 5H41L50 12M29 46V40Q35 33 41 40V46"/></svg><span>永宁门<small>YONGNING GATE</small></span><span class="tab-arrow">↗</span></button>
+   </div>
+   <div class="modes"><span>观测模式 / VIEW MODE</span><div role="group" aria-label="观测模式"><button data-mode="0">点云</button><button data-mode="1" class="active" aria-pressed="true">扫描</button><button data-mode="2">解构</button></div></div>
+  </footer>
+  <div class="colophon"><span>CHANG’AN · ARCHITECTURAL STUDIES</span><span>程序化艺术重构</span><span>西安 · 中国</span></div>
+ </div>
+ <aside class="settings-panel" id="settings" hidden aria-label="画面设置">
+  <div class="panel-title"><span>画面设置<small>OBSERVATION SETTINGS</small></span><button id="closeSettings" aria-label="关闭设置">×</button></div>
+  <label for="density">点云密度 <output id="densityValue">100%</output></label><input id="density" type="range" min="25" max="100" value="100">
+  <label for="pointSize">粒子尺寸 <output id="sizeValue">1.2</output></label><input id="pointSize" type="range" min="0.6" max="2.8" step="0.1" value="1.2">
+  <label for="scanSpeed">扫描速度 <output id="speedValue">1.0×</output></label><input id="scanSpeed" type="range" min="0.2" max="2.4" step="0.1" value="1">
+  <label class="switch-label" for="autoRotate">自动环绕 <input id="autoRotate" type="checkbox" checked></label>
+  <label for="seed">点云种子 <output>固定种子可复现</output></label><div class="seed-input"><input id="seed" type="number" min="0" max="999999" value="1384" aria-label="点云种子"><button id="regenerate">重新生成 ↗</button></div>
+  <button id="resetSettings" class="reset-settings">恢复默认参数 ↺</button>
+ </aside>
+ <dialog id="aboutDialog"><button class="dialog-close" id="closeAbout" aria-label="关闭作品介绍">×</button><span class="dialog-kicker">XI’AN · ARCHITECTURAL STUDIES</span><h2>长安显影</h2><p>点云呈现建筑的轮廓与构件。<br>拖动旋转，近看屋檐、门窗与砖缝。</p><p>本作以西安钟楼、大雁塔与永宁门为题材，通过程序化建模、表面点云与动态扫描，探索古建的数字表达。模型为艺术化概念重构，点数是生成数据，并非现场激光测绘结果。永宁门场景是城台与城楼意象，不包含完整瓮城。</p><p class="sources">视觉媒介参考：<a href="https://www.xiaohongshu.com/explore/6adea0c4000000001801a68f" target="_blank" rel="noopener noreferrer">AIGC爻木 · 山西古建概念数字艺术 ↗</a><br>建筑资料：<a href="https://www.xakpw.com/single/23539" target="_blank" rel="noopener noreferrer">西安科普网 · 钟楼形制 ↗</a> / <a href="https://www.jinshasitemuseum.com/seardetail/2658" target="_blank" rel="noopener noreferrer">金沙遗址博物馆 · 大雁塔 ↗</a></p><div class="dialog-bottom">THREE.JS · PROCEDURAL ARCHITECTURE · POINT CLOUD</div></dialog>
+ <div id="toast" role="status"></div>
+ <script>/* SCRIPT */</script>
+</body></html>

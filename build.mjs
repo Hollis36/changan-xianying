@@ -1,0 +1,11 @@
+import {build} from 'esbuild';
+import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
+const result=await build({entryPoints:['src/exhibition/main.js'],bundle:true,write:false,minify:true,format:'iife',target:['es2020'],legalComments:'inline'});
+const css=await readFile('src/exhibition/style.css','utf8')+'\n'+await readFile('src/exhibition/order.css','utf8');
+const template=(await readFile('src/exhibition/page.html','utf8')).replace('免费限时预览 · 复制不会延长有效期','GitHub Pages · 公开展览').replace('限时 ↗','↗');
+const license=await readFile('legal/THREE-LICENSE.txt','utf8');const soundtrack=await readFile('assets/soundtrack.mp3');
+const html=template.replace('__BACKGROUND_MUSIC__',()=>`data:audio/mpeg;base64,${soundtrack.toString('base64')}`).replace('/* STYLE */',()=>css).replace('/* SCRIPT */',()=>`/* Three.js license\n${license}\n*/\n`+result.outputFiles[0].text.replace(/<\/script/gi,'<\\/script'));
+await mkdir('docs/exhibition',{recursive:true});await writeFile('docs/exhibition/index.html',html);
+for(const name of ['index.html','style.css','main.js'])await copyFile(`site/${name}`,`docs/${name}`);
+await writeFile('docs/.nojekyll','');
+console.log('Showcase and interactive exhibition built.');

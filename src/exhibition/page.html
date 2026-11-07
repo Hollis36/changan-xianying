@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f6"><title>长安显影 · 展览版</title><style>/* STYLE */</style></head><body>
+<div class="gallery">
+ <header>
+  <a class="wordmark" href="#" aria-label="长安显影，返回观赏">长安显影</a>
+  <div class="mode-nav" role="group" aria-label="观看方式"><button id="enterViewing" aria-pressed="true">观赏</button><button id="enterStudy" aria-pressed="false" title="构件讲解仅适用于钟楼">构件 <small>钟楼</small></button><button id="enterOrder" aria-pressed="false">秩序</button></div>
+  <div class="header-actions"><button id="musicToggle" class="music-toggle" aria-pressed="false" aria-label="播放背景音乐《长安万象》" title="长安万象 · 管弦配乐">音乐 <span class="music-symbol" aria-hidden="true">♪</span></button>
+  <details id="moreMenu" class="more-menu"><summary>更多 <span aria-hidden="true">＋</span></summary><div class="more-content">
+   <button id="copyShare">复制分享链接 <span id="shareStatus">限时 ↗</span></button>
+   <button id="openGeography">中轴与三景 <span>地理图 ↗</span></button><button id="poster">保存建筑海报 <span>PNG ↓</span></button><button id="triptych">收藏长安三景 <span>横幅 ↗</span></button><button id="openAbout">关于作品 <span>说明 ↗</span></button>
+  </div></details></div>
+ </header>
+ <main>
+  <section class="label" aria-live="polite"><div class="building-heading"><div class="index"><span id="number">01</span><span>西安 · 古建</span></div><h1 id="name">钟楼</h1><p id="english" class="english" hidden>THE BELL TOWER</p><p id="era" class="era">明 · 洪武十七年 / 1384</p></div><div class="building-reading"><p id="description" class="description">层檐叠影立城中，<br>四面长街接晚风。<br>一杵清音穿巷陌，<br>余声渐远入秋空。</p><p class="view-label">此刻观看 <span id="viewName">全景</span></p><p id="viewText" class="view-text">拖动转动建筑，滚轮拉近细部。</p></div></section>
+  <section id="anatomyPanel" class="anatomy-panel" hidden aria-labelledby="studyHeading">
+   <div class="study-heading"><p class="study-kicker">构件笔记 / 钟楼</p><h2 id="studyHeading" tabindex="-1"><span>一座钟楼，</span><span>如何组成</span></h2></div>
+   <div id="partButtons" class="part-buttons" role="group" aria-label="选择钟楼构件"></div>
+   <div class="study-reading"><div id="partExplanation" class="part-explanation" aria-live="polite"><p id="partEnglish" class="english" hidden></p><h3 id="partTitle"></h3><p id="partText"></p><p id="partFact"></p></div><button id="openSources" class="text-button source-button">资料与模型说明 <span>↗</span></button><button id="exitStudy" class="study-back">返回观赏</button></div>
+  </section>
+  <div id="anatomyControls" class="anatomy-controls" hidden><p id="anatomyStatus" role="status"></p><div class="study-actions"><button id="spreadParts" aria-pressed="true">合拢构件</button><button id="isolatePart" aria-pressed="false" disabled>只看这一组</button><button id="resetStudy">复位</button></div><small>艺术重构 · 分层为讲解示意</small></div>
+  <section id="orderPanel" class="order-panel" hidden aria-labelledby="orderHeading">
+   <div class="order-heading"><p class="order-kicker">看见秩序 / <span id="orderBuilding">钟楼</span></p><h2 id="orderHeading" tabindex="-1"><span id="orderTitle">重复与连接</span></h2></div>
+   <div class="order-reading"><p id="orderLead" class="order-lead"></p>
+   <svg id="orderDiagram" class="order-diagram" viewBox="0 0 280 180" role="img" aria-label="建筑关系示意"></svg>
+   <button id="openOrderExplanation" class="text-button order-explain">公式与讲解 <span>＋</span></button>
+   <p class="order-scope">模型关系示意 · 非实测</p><button id="exitOrder" class="study-back">返回观赏</button></div>
+  </section>
+  <div id="stage" class="stage" aria-label="建筑点云，拖动旋转，滚轮或双指缩放"><p id="loading" role="status">正在生成建筑</p></div>
+  <section id="orderControls" class="order-controls" hidden aria-label="数学关系演示控制">
+   <div id="orderSteps" class="order-steps" role="group" aria-label="选择关系展示"></div>
+   <div id="orderRangeWrap" class="order-range" hidden><label id="orderRangeLabel" for="orderRange">选择层级</label><input id="orderRange" type="range" min="0" max="6" step="1" value="0"><output id="orderPosition" for="orderRange">第 1 层</output></div>
+   <div class="order-controls-foot"><p id="orderCaption" aria-live="polite"></p><button id="orderReset">复位视角 ↺</button></div>
+  </section>
+  <div class="art-note" hidden aria-hidden="true"><span id="concept">交<br>汇</span></div>
+  <div class="view-controls"><button id="overview" aria-pressed="true">全景</button><span class="divider"></span><div id="details" role="group" aria-label="选择建筑细部"></div></div>
+  <div class="motion"><button id="orbit" aria-pressed="false">缓慢环绕 <span>↻</span></button><span>拖动旋转 · 滚轮缩放</span></div>
+ </main>
+ <footer><nav class="building-nav" aria-label="选择建筑"><button data-building="bell" aria-pressed="true"><small>01</small><span>钟楼</span></button><button data-building="pagoda" aria-pressed="false"><small>02</small><span>大雁塔</span></button><button data-building="gate" aria-pressed="false"><small>03</small><span>永宁门</span></button></nav></footer>
+</div>
+<dialog id="aboutDialog" aria-labelledby="aboutHeading"><div class="dialog-top"><h2 id="aboutHeading">关于长安显影</h2><button id="closeAbout" aria-label="关闭作品说明" autofocus>×</button></div><p>以钟楼、大雁塔、永宁门为题材的三维点云艺术。观赏形制，拆看构件，再观察其中的重复、递进与空间关系。</p><section class="model-scope"><h3>程序化艺术重构</h3><p>建筑比例、构件数量与纹样均有艺术化简化，不是实测点云或文物测绘模型。永宁门不含完整瓮城；数学展示解释当前模型，不构成历史设计比例的证据。</p></section><p>拖动旋转，滚轮或双指缩放。构件讲解目前仅提供钟楼；公式、模型范围及资料来源可在对应模式中展开查看。</p><p class="source-foot">三景题咏为本作品原创配诗（AI 辅助创作），非古人诗作。页面离线可用，外部文献链接需联网。保存建筑海报输出独立建筑画面，不包含讲解辅助线。</p></dialog>
+<dialog id="collectionDialog"><div class="dialog-top"><div><span class="eyebrow">长安显影 / 收藏</span><h2>长安三景</h2></div><button id="closeCollection" aria-label="关闭长安三景">×</button></div><p>三重屋檐、七层砖塔、横向城墙。把三种形制放在一起观看。</p><canvas id="collectionCanvas" width="3600" height="1800" aria-label="钟楼、大雁塔、永宁门三联横幅"></canvas><div class="dialog-bottom"><span>3600 × 1800 · PNG</span><button id="downloadCollection">保存三景横幅 ↓</button></div></dialog>
+<dialog id="sourcesDialog" aria-labelledby="sourcesHeading"><div class="dialog-top"><div><span class="eyebrow" id="sourcesSubtitle"></span><h2 id="sourcesHeading">资料与模型说明</h2></div><button id="closeSources" aria-label="关闭资料与模型说明">×</button></div><section class="model-scope"><h3>本模型如何表达</h3><p id="modelScope"></p></section><div id="sourceList"></div><p class="source-foot">资料核对：2026-11-01。讲解为摘要转述；原文在新标签页打开，需联网。</p></dialog>
+<dialog id="geographyDialog" aria-labelledby="geographyHeading"><div class="dialog-top"><h2 id="geographyHeading">地理图</h2><button id="closeGeography" aria-label="关闭地理图">×</button></div>
+ <p class="map-scroll-hint">放大后可横向滑动。</p>
+ <div class="geography-viewport" tabindex="0" role="region" aria-label="地理图，可横向滚动"><canvas id="geographyCanvas" width="1800" height="2200" role="img" aria-label="北向朝上的西安地理示意图：钟楼在永宁门以北约0.9公里，大雁塔在永宁门东南约4.0公里，城墙及道路概略绘制。"></canvas></div>
+ <div class="geography-actions"><div role="group" aria-label="从地图查看建筑"><button data-map-building="bell">看钟楼 ↗</button><button data-map-building="gate">看永宁门 ↗</button><button data-map-building="pagoda">看大雁塔 ↗</button></div><button id="zoomGeography" aria-pressed="false">放大细看</button><button id="saveGeography" class="text-button">保存地理图 ↓</button></div>
+ <p id="geographyStatus" role="status" aria-live="polite"></p>
+ <details class="geography-sources"><summary>地图说明与资料来源</summary><p>建筑锚点按 WGS84 经纬度定位，距离为锚点间的球面直线距离。城墙以四门方位作概括，道路与中轴线为示意；点云肖像不按占地比例绘制。本图表现明清古城与现今城南的关系，不是唐长安城复原图或导航图。</p><p>坐标：<a href="https://zh.wikipedia.org/wiki/西安钟楼" target="_blank" rel="noopener noreferrer">钟楼</a>（34.26101, 108.94238）、<a href="https://zh.wikipedia.org/wiki/永宁门" target="_blank" rel="noopener noreferrer">永宁门</a>（34.25314, 108.94235）、<a href="https://zh.wikipedia.org/wiki/大雁塔" target="_blank" rel="noopener noreferrer">大雁塔</a>（34.2197694, 108.9593361）。</p><p>城门参考：<a href="https://zh.wikipedia.org/wiki/安远门" target="_blank" rel="noopener noreferrer">安远门</a>、<a href="https://zh.wikipedia.org/wiki/安定门_(西安)" target="_blank" rel="noopener noreferrer">安定门</a>、<a href="https://mapcarta.com/es/W423874161" target="_blank" rel="noopener noreferrer">长乐门</a>。城墙轮廓不是测绘边界。</p><p>轴线依据：<a href="https://epaper.sanqin.com/html/pic/202408/25/c6695321-f223-4541-a2cd-1e01270870d8.pdf" target="_blank" rel="noopener noreferrer">三秦都市报《漫步西安中轴线 穿越时光的城市脉络》</a>，2024-08-25。这里只画三景所在的城区局部，不表示中轴线全长。核对日期：2026-11-01。</p></details>
+</dialog>
+<dialog id="orderDialog" aria-labelledby="orderDialogHeading">
+ <div class="dialog-top"><h2 id="orderDialogHeading">公式与讲解</h2><button id="closeOrderExplanation" aria-label="关闭公式与讲解" autofocus>×</button></div>
+ <p id="orderFormula" class="order-formula"></p><p id="orderDefinition"></p><p id="orderExplanation"></p>
+ <table id="orderValues" hidden></table>
+ <div class="order-model-note"><h3>表达范围</h3><p id="orderScope"></p></div>
+ <h3 class="order-source-heading">研究依据</h3><div id="orderSources"></div>
+ <p class="order-source-foot">来源在新标签页打开，需联网。几何关系用于理解形式，不是美感评分。</p>
+</dialog>
+<dialog id="shareDialog" aria-labelledby="shareHeading"><div class="dialog-top"><h2 id="shareHeading">分享长安显影</h2><button id="closeShare" aria-label="关闭分享" autofocus>×</button></div><p id="shareMessage" role="status" aria-live="polite"></p><div id="shareField"><label for="shareLink">完整分享链接</label><textarea id="shareLink" readonly rows="4" spellcheck="false"></textarea></div><div class="dialog-bottom"><span>免费限时预览 · 复制不会延长有效期</span><button id="retryShare">再次复制</button></div></dialog>
+<audio id="backgroundMusic" preload="none" loop hidden src="__BACKGROUND_MUSIC__"></audio>
+<p id="notice" role="status" aria-live="polite"></p><script>/* SCRIPT */</script></body></html>
