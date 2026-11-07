@@ -1,7 +1,7 @@
 export function setupPlayer(video, quality, message) {
   const source = video.querySelector('source');
   const sources = {
-    '4k': 'https://github.com/Hollis36/changan-xianying/releases/download/v2026.11.07/changan-xianying-4k.mp4',
+    '4k': 'https://github.com/Hollis36/changan-xianying/releases/download/v2026.11.07/changan-xianying-4k-web.mp4',
     '1080p': 'assets/film.mp4',
   };
   let pendingMetadata, pendingRestore;

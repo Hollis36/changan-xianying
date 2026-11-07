@@ -1,4 +1,4 @@
-import {setupPlayer} from './player.js';
+import {setupPlayer} from './player.js?v=4k-web-1';
 const share=document.querySelector('#share');
 const dialog=document.querySelector('#share-dialog');
 const field=document.querySelector('#share-url');
