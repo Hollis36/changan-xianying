@@ -1,3 +1,4 @@
+import {setupPlayer} from './player.js';
 const share=document.querySelector('#share');
 const dialog=document.querySelector('#share-dialog');
 const field=document.querySelector('#share-url');
@@ -9,6 +10,4 @@ share.addEventListener('click',async()=>{
 });
 document.querySelector('#close-share').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('close',()=>share.focus());
-const video=document.querySelector('video');
-video.addEventListener('error',()=>document.querySelector('#video-error').hidden=false);
-video.querySelector('source').addEventListener('error',()=>document.querySelector('#video-error').hidden=false);
+setupPlayer(document.querySelector('video'),document.querySelector('#video-quality'),document.querySelector('#video-error'));
