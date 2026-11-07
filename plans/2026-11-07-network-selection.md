@@ -8,4 +8,6 @@ Architecture: Keep one preloading video. network.js probes only two allowlisted 
 - [x] Add player controller accessors to update known 1080P route and apply auto decisions while retaining pending playhead/play intent. Recover once to the other measured available route on 1080P error, no retry loop.
 - [x] Integrate monitor/status disclosure/retest into site/main.js, HTML and CSS; build copies network.js. Version module URLs together.
 - [x] Verify manual change cancels old detection; 1080P measurements never become a false 4K upgrade; fallback progress and paused state survive.
-- [ ] Run all tests and build, independent code review, verify actual browser diagnostics. Push only reviewed built assets and verify successful Pages deployment and public behavior.
+- [x] Run all tests and build, independent code review, verify actual browser diagnostics. Push only reviewed built assets and verify successful Pages deployment and public behavior.
+
+Verification: 45 tests passed; build and diff checks passed; independent review blockers fixed. Pages deployment 42388421817 succeeded for b1f4439. Public HTML and all changed JS/CSS matched built assets. Browser observed both measured routes (Pages 1.82s, Raw 2.30s in this sample), selected Pages 1080P, and playback time advanced. Raw playback separately verified at 1920×1080. These samples do not establish sustained throughput or mainland reachability.
