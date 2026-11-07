@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {setupPlayer} from '../site/player.js';
+const ORIGINAL='https://github.com/Hollis36/changan-xianying/releases/download/v2026.11.07/changan-xianying-4k-web.mp4';
 function fixture(paused, timers) {
-  const source=new EventTarget();source.src='original';
+  const source=new EventTarget();source.src=ORIGINAL;
   const video=Object.assign(new EventTarget(),{currentTime:42,duration:126,paused,ended:false,plays:0,querySelector:()=>source,load(){this.currentTime=0;this.paused=true;},play(){this.plays++;this.paused=false;return Promise.resolve();}});
   const quality=Object.assign(new EventTarget(),{value:'1080p'}),message={hidden:true};
-  setupPlayer(video,quality,message,timers);return {source,video,quality,message};
+  const player=setupPlayer(video,quality,message,timers);return {source,video,quality,message,player};
 }
 test('quality change restores the playhead and resumes an active film',async()=>{
   const {source,video,quality}=fixture(false);
@@ -53,11 +54,11 @@ test('auto mode falls back after sustained buffering and restores position',asyn
 });
 test('brief buffering or pausing cancels automatic quality fallback',()=>{
   for(const event of ['playing','pause']) {
-    const f=bufferingFixture();f.video.dispatchEvent(new Event('waiting'));f.video.dispatchEvent(new Event(event));f.tick();assert.equal(f.source.src,'original');
+    const f=bufferingFixture();f.video.dispatchEvent(new Event('waiting'));f.video.dispatchEvent(new Event(event));f.tick();assert.equal(f.source.src,ORIGINAL);
   }
 });
 test('manual 4K selection is never automatically downgraded',()=>{
-  const f=bufferingFixture();f.quality.value='4k';f.video.dispatchEvent(new Event('waiting'));f.tick();assert.equal(f.source.src,'original');
+  const f=bufferingFixture();f.quality.value='4k';f.video.dispatchEvent(new Event('waiting'));f.tick();assert.equal(f.source.src,ORIGINAL);
 });
 test('initial play with no buffer starts the automatic fallback timer',()=>{
   const f=bufferingFixture();f.video.dispatchEvent(new Event('play'));f.tick();assert.equal(f.source.src,'assets/film.mp4');
@@ -75,4 +76,19 @@ test('seeking into an unbuffered region can fall back at the requested position'
 });
 test('download stalls with enough buffered video do not start the fallback timer',()=>{
   const f=bufferingFixture();f.video.readyState=4;f.video.dispatchEvent(new Event('stalled'));assert.equal(f.pending(),false);
+});
+
+test('auto route changes preserve paused playhead and only allow known sources',()=>{
+ const f=fixture(true);f.quality.value='auto';f.player.selectAutomatic('1080p');
+ f.player.set1080Route('https://raw.githubusercontent.com/Hollis36/changan-xianying/main/docs/assets/film.mp4');
+ f.video.dispatchEvent(new Event('loadedmetadata'));assert.equal(f.video.currentTime,42);assert.equal(f.video.plays,0);
+ const before=f.source.src;f.player.set1080Route('https://untrusted.example/video.mp4');assert.equal(f.source.src,before);
+});
+test('network selection cannot change manually selected resolution',()=>{
+ const f=fixture(false);f.quality.value='4k';f.player.selectAutomatic('1080p');assert.equal(f.source.src,ORIGINAL);
+});
+test('4K errors do not misreport the newly selected 1080P route as failed',()=>{
+ const f=fixture(true);f.quality.value='auto';let calls=0;f.player.onRouteError(()=>{calls++;return false;});
+ f.source.dispatchEvent(new Event('error'));assert.equal(calls,0);assert.equal(f.source.src,'assets/film.mp4');
+ f.source.dispatchEvent(new Event('error'));assert.equal(calls,1);
 });
