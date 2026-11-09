@@ -1,0 +1,38 @@
+{
+  "release": "v2026.11.09-archive",
+  "repository": "Hollis36/changan-xianying",
+  "archive": {
+    "name": "changan-xianying-public-archive-20261109.zip",
+    "size": 2261674439,
+    "sha256": "b0ee1083e5f8b93e2afa57810da29547ba5aeff022c69fd22d36abbae97257a9"
+  },
+  "parts": [
+    {
+      "name": "changan-xianying-public-archive-20261109.zip.part01",
+      "size": 1500000000,
+      "sha256": "4ec0eaebff79de5db471adbb385621db74de2635d17b1f93f1ae789aae95bfee"
+    },
+    {
+      "name": "changan-xianying-public-archive-20261109.zip.part02",
+      "size": 761674439,
+      "sha256": "7e7c817b386ccab6d2f674b09bb02fbf519a1cea23717300abf51cfa7ec0d814"
+    }
+  ],
+  "assets": [
+    {
+      "name": "music-bed.wav",
+      "size": 37536078,
+      "sha256": "d0b3f38550d9b87ee96c7cb1333acfc9a232cf21b357f09cc907a665fbfab987"
+    },
+    {
+      "name": "orchestral-master-20s.wav",
+      "size": 5760044,
+      "sha256": "96e8c3b6d8dddb17c3e387af039cc8e7731dbe7dd57a78b2d3d276d93a7fb111"
+    },
+    {
+      "name": "orchestral-samples.zip",
+      "size": 36114078,
+      "sha256": "d7f41857c02acf24276222e21ea8aa6633ef6a51f665583cc6b274f264193a11"
+    }
+  ]
+}

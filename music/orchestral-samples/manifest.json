@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/sgossner/VSCO-2-CE",
+  "commit": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+  "license": "CC0-1.0",
+  "files": [
+    "LICENSE",
+    "Readme.txt",
+    "Brass/F Horn/sus/MOHorn_sus_D2_v2_1.wav",
+    "Brass/F Horn/sus/MOHorn_sus_F2_v2_1.wav",
+    "Brass/F Horn/sus/MOHorn_sus_A2_v2_1.wav",
+    "Brass/F Horn/sus/MOHorn_sus_C3_v2_1.wav",
+    "Brass/F Horn/sus/MOHorn_sus_A#1_v2_1.wav",
+    "Brass/F Horn/sus/MOHorn_sus_G1_v2_1.wav",
+    "Brass/Tenor Trombone/sus/tenortbn_sus_D2_v1_1.wav",
+    "Brass/Tenor Trombone/sus/tenortbn_sus_F1_v1_1.wav",
+    "Brass/Tenor Trombone/sus/tenortbn_sus_A#1_v1_1.wav",
+    "Strings/Cello Section/susvib/susvib_C1_v1_1.wav",
+    "Strings/Cello Section/susvib/susvib_G1_v1_1.wav",
+    "Strings/Cello Section/susvib/susvib_D2_v1_1.wav",
+    "Strings/Cello Section/susvib/susvib_F2_v1_1.wav",
+    "Strings/Cello Section/susvib/susvib_A2_v1_1.wav",
+    "Strings/Violin Section/susVib/VlnEns_susVib_D3_v2.wav",
+    "Strings/Violin Section/susVib/VlnEns_susVib_A3_v2.wav",
+    "Strings/Violin Section/susVib/VlnEns_susVib_C4_v2.wav",
+    "Strings/Violin Section/susVib/VlnEns_susVib_G4_v2.wav",
+    "Percussion/BDrumNewhit_v5_rr1_Sum.wav",
+    "Percussion/BDrumNewhit_v4_rr2_Sum.wav",
+    "Percussion/Timpani/Timpani1_Hit_v3_rr1_Sum.wav",
+    "Percussion/susCymb1-hit_mp_rr1.wav",
+    "VSCO 1 Percussion/varMetal/Gong/gong_hit_mf_3.wav",
+    "Brass/F Horn/sus/MOHorn_sus_D4_v1_1.wav"
+  ]
+}

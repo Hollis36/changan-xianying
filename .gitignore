@@ -3,3 +3,11 @@ node_modules/
 *.log
 .env
 .env.*
+
+# Generated media and private/local working files
+output/
+.venv/
+__pycache__/
+*.pyc
+music/orchestral-samples/**/*.wav
+video/anatomy/music-bed.wav

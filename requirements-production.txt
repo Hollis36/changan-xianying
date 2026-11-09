@@ -1,0 +1,5 @@
+numpy==2.2.6
+scipy==1.16.1
+soundfile==0.13.1
+Pillow==12.1.0
+reportlab==4.4.10

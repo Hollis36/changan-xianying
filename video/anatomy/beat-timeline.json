@@ -1,0 +1,299 @@
+{
+  "method": "Score-informed measured orchestral onsets; 19.5-second crossfade loop offsets; snapped to 30fps. Automatic BPM grid confidence 0.22 rejected.",
+  "frames": [
+    0,
+    242,
+    424,
+    588,
+    827,
+    1009,
+    1173,
+    1366,
+    1532,
+    1758,
+    1997,
+    2179,
+    2343,
+    2582,
+    2764,
+    2928,
+    3121,
+    3287,
+    3513,
+    3706,
+    3872,
+    4098,
+    4337,
+    4519,
+    4683,
+    4876,
+    5042,
+    5268,
+    5461,
+    5627,
+    5760
+  ],
+  "cuts": [
+    {
+      "time": 8.066666666666666,
+      "scoreTime": 8.08,
+      "strength": 1,
+      "cue": "大鼓与和声",
+      "measuredOnset": 8.08,
+      "nominal": 10,
+      "frame": 242
+    },
+    {
+      "time": 14.133333333333333,
+      "scoreTime": 14.1,
+      "strength": 0.6,
+      "cue": "大鼓",
+      "measuredOnset": 14.12,
+      "nominal": 16,
+      "frame": 424
+    },
+    {
+      "time": 19.6,
+      "scoreTime": 19.6,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 19.6,
+      "nominal": 22,
+      "frame": 588
+    },
+    {
+      "time": 27.566666666666666,
+      "scoreTime": 27.58,
+      "strength": 1,
+      "cue": "大鼓与和声",
+      "measuredOnset": 27.58,
+      "nominal": 28,
+      "frame": 827
+    },
+    {
+      "time": 33.63333333333333,
+      "scoreTime": 33.6,
+      "strength": 0.6,
+      "cue": "大鼓",
+      "measuredOnset": 33.62,
+      "nominal": 34,
+      "frame": 1009
+    },
+    {
+      "time": 39.1,
+      "scoreTime": 39.1,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 39.1,
+      "nominal": 40,
+      "frame": 1173
+    },
+    {
+      "time": 45.53333333333333,
+      "scoreTime": 45.5,
+      "strength": 0.3,
+      "cue": "圆号换句",
+      "measuredOnset": 45.53,
+      "nominal": 46,
+      "frame": 1366
+    },
+    {
+      "time": 51.06666666666667,
+      "scoreTime": 51.08,
+      "strength": 1.25,
+      "cue": "大鼓与铜锣",
+      "measuredOnset": 51.08,
+      "nominal": 52,
+      "frame": 1532
+    },
+    {
+      "time": 58.6,
+      "scoreTime": 58.6,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 58.6,
+      "nominal": 58,
+      "frame": 1758
+    },
+    {
+      "time": 66.56666666666666,
+      "scoreTime": 66.58,
+      "strength": 1,
+      "cue": "大鼓与和声",
+      "measuredOnset": 66.58,
+      "nominal": 64,
+      "frame": 1997
+    },
+    {
+      "time": 72.63333333333334,
+      "scoreTime": 72.6,
+      "strength": 0.6,
+      "cue": "大鼓",
+      "measuredOnset": 72.62,
+      "nominal": 74,
+      "frame": 2179
+    },
+    {
+      "time": 78.1,
+      "scoreTime": 78.1,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 78.1,
+      "nominal": 80,
+      "frame": 2343
+    },
+    {
+      "time": 86.06666666666666,
+      "scoreTime": 86.08,
+      "strength": 1,
+      "cue": "大鼓与和声",
+      "measuredOnset": 86.08,
+      "nominal": 86,
+      "frame": 2582
+    },
+    {
+      "time": 92.13333333333334,
+      "scoreTime": 92.1,
+      "strength": 0.6,
+      "cue": "大鼓",
+      "measuredOnset": 92.12,
+      "nominal": 92,
+      "frame": 2764
+    },
+    {
+      "time": 97.6,
+      "scoreTime": 97.6,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 97.6,
+      "nominal": 98,
+      "frame": 2928
+    },
+    {
+      "time": 104.03333333333333,
+      "scoreTime": 104.0,
+      "strength": 0.3,
+      "cue": "圆号换句",
+      "measuredOnset": 104.03,
+      "nominal": 104,
+      "frame": 3121
+    },
+    {
+      "time": 109.56666666666666,
+      "scoreTime": 109.58,
+      "strength": 1.25,
+      "cue": "大鼓与铜锣",
+      "measuredOnset": 109.58,
+      "nominal": 110,
+      "frame": 3287
+    },
+    {
+      "time": 117.1,
+      "scoreTime": 117.1,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 117.1,
+      "nominal": 116,
+      "frame": 3513
+    },
+    {
+      "time": 123.53333333333333,
+      "scoreTime": 123.5,
+      "strength": 0.3,
+      "cue": "圆号换句",
+      "measuredOnset": 123.53,
+      "nominal": 122,
+      "frame": 3706
+    },
+    {
+      "time": 129.06666666666666,
+      "scoreTime": 129.08,
+      "strength": 1.25,
+      "cue": "大鼓与铜锣",
+      "measuredOnset": 129.08,
+      "nominal": 128,
+      "frame": 3872
+    },
+    {
+      "time": 136.6,
+      "scoreTime": 136.6,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 136.6,
+      "nominal": 138,
+      "frame": 4098
+    },
+    {
+      "time": 144.56666666666666,
+      "scoreTime": 144.58,
+      "strength": 1,
+      "cue": "大鼓与和声",
+      "measuredOnset": 144.58,
+      "nominal": 144,
+      "frame": 4337
+    },
+    {
+      "time": 150.63333333333333,
+      "scoreTime": 150.6,
+      "strength": 0.6,
+      "cue": "大鼓",
+      "measuredOnset": 150.62,
+      "nominal": 150,
+      "frame": 4519
+    },
+    {
+      "time": 156.1,
+      "scoreTime": 156.1,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 156.1,
+      "nominal": 156,
+      "frame": 4683
+    },
+    {
+      "time": 162.53333333333333,
+      "scoreTime": 162.5,
+      "strength": 0.3,
+      "cue": "圆号换句",
+      "measuredOnset": 162.53,
+      "nominal": 162,
+      "frame": 4876
+    },
+    {
+      "time": 168.06666666666666,
+      "scoreTime": 168.08,
+      "strength": 1.25,
+      "cue": "大鼓与铜锣",
+      "measuredOnset": 168.08,
+      "nominal": 168,
+      "frame": 5042
+    },
+    {
+      "time": 175.6,
+      "scoreTime": 175.6,
+      "strength": 0.7,
+      "cue": "大鼓",
+      "measuredOnset": 175.6,
+      "nominal": 174,
+      "frame": 5268
+    },
+    {
+      "time": 182.03333333333333,
+      "scoreTime": 182.0,
+      "strength": 0.3,
+      "cue": "圆号换句",
+      "measuredOnset": 182.03,
+      "nominal": 180,
+      "frame": 5461
+    },
+    {
+      "time": 187.56666666666666,
+      "scoreTime": 187.58,
+      "strength": 1.25,
+      "cue": "大鼓与铜锣",
+      "measuredOnset": 187.58,
+      "nominal": 186,
+      "frame": 5627
+    }
+  ]
+}
